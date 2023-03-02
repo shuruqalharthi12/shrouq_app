@@ -1,0 +1,85 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+import '../clinic/clinic.dart';
+
+import '../opreator/operator.dart';
+
+part 'appointment.freezed.dart';
+part 'appointment.g.dart';
+
+@freezed
+class Appointment with _$Appointment {
+  factory Appointment({
+    @JsonKey(name: 'APPT_NUMBER') String? apptNumber,
+    @JsonKey(name: 'CLINIC_CODE') String? clinicCode,
+    @JsonKey(name: 'TYPE') String? type,
+    @JsonKey(name: 'HOSPITAL_NO') String? hospitalNo,
+    @JsonKey(name: 'EPISODE_NO') String? episodeNo,
+    @JsonKey(name: 'WL_ENTRY_NO') dynamic wlEntryNo,
+    @JsonKey(name: 'OPERATOR1_TO_SEE') Operator? operator1ToSee,
+    @JsonKey(name: 'OP1_TX_AREA') String? op1TxArea,
+    @JsonKey(name: 'OPERATOR2_TO_SEE') dynamic operator2ToSee,
+    @JsonKey(name: 'OP2_TX_AREA') dynamic op2TxArea,
+    @JsonKey(name: 'SUPERVISOR_TO_SEE') Operator? supervisorToSee,
+    @JsonKey(name: 'TIME_START_TO_SEE') String? timeStartToSee,
+    @JsonKey(name: 'TIME_STOP_TO_SEE') String? timeStopToSee,
+    @JsonKey(name: 'DURATION_TO_SEE') String? durationToSee,
+    @JsonKey(name: 'STATUS') String? status,
+    @JsonKey(name: 'TREATMENT_FORM') String? treatmentForm,
+    // @JsonKey(name: 'NOTES') dynamic notes,
+    // @JsonKey(name: 'CANC_SYSTEM_NOTE') dynamic cancSystemNote,
+    @JsonKey(name: 'TIME_START_SEEN') String? timeStartSeen,
+    @JsonKey(name: 'TIME_STOP_SEEN') String? timeStopSeen,
+    @JsonKey(name: 'DURATION_SEEN') String? durationSeen,
+    @JsonKey(name: 'OPERATOR1_SEEN') String? operator1Seen,
+    // @JsonKey(name: 'OP1_TX_AREA_SEEN') String? op1TxAreaSeen,
+    @JsonKey(name: 'OPERATOR2_SEEN') dynamic operator2Seen,
+    // @JsonKey(name: 'OP2_TX_AREA_SEEN') dynamic op2TxAreaSeen,
+    @JsonKey(name: 'SUPERVISOR_SEEN') dynamic supervisorSeen,
+    @JsonKey(name: 'NOTES_POST_APPT') dynamic notesPostAppt,
+    // @JsonKey(name: 'CSSD_ORDERED') String? cssdOrdered,
+    //@JsonKey(name: 'CSSD_ORDERED_DATE') dynamic cssdOrderedDate,
+    //  @JsonKey(name: 'UPDATED_BY') String? updatedBy,
+    //  @JsonKey(name: 'UPDATED_DATE') String? updatedDate,
+    // @JsonKey(name: 'AUTH_BY') dynamic authBy,
+    // @JsonKey(name: 'DNA_INVOICED') String? dnaInvoiced,
+    // @JsonKey(name: 'DNA_INVOICED_VALUE') String? dnaInvoicedValue,
+    //  @JsonKey(name: 'AUTH_DATE') dynamic authDate,
+    @JsonKey(name: 'MANDATORY_COMMENTS') dynamic mandatoryComments,
+    //  @JsonKey(name: 'PROFICIENCY') dynamic proficiency,
+    // @JsonKey(name: 'GRADE') dynamic grade,
+    //  @JsonKey(name: 'CONFIRMED') String? confirmed,
+    //  @JsonKey(name: 'DATE_CONFIRMED') dynamic dateConfirmed,
+    // @JsonKey(name: 'CHAIRNO') String? chairno,
+    // @JsonKey(name: 'STATUS_DETAILS') dynamic statusDetails,
+    // @JsonKey(name: 'NONCOFIRM_DETAILS') dynamic noncofirmDetails,
+    // @JsonKey(name: 'AUTH_OP1_BY') dynamic authOp1By,
+    // @JsonKey(name: 'AUTH_OP1_DATE') dynamic authOp1Date,
+    // @JsonKey(name: 'AUTH_OP2_BY') dynamic authOp2By,
+    // @JsonKey(name: 'AUTH_OP2_DATE') dynamic authOp2Date,
+    //  @JsonKey(name: 'NOT_SENT_DATE') dynamic notSentDate,
+    //  @JsonKey(name: 'NOT_SENT_BY') dynamic notSentBy,
+    //  @JsonKey(name: 'NOT_RECIEVED_DATE') dynamic notRecievedDate,
+    //  @JsonKey(name: 'NOT_RECEIVED_BY') dynamic notReceivedBy,
+    // @JsonKey(name: 'DATE_CREATED') String? dateCreated,
+    // @JsonKey(name: 'OPERATOR2_ROLE') dynamic operator2Role,
+    @JsonKey(name: 'OPERATOR1_ROLE') String? operator1Role,
+    // @JsonKey(name: 'REMINDER_NUMBER') int? reminderNumber,
+    @JsonKey(name: 'APP_START_CHECK') int? appStartCheck,
+    // @JsonKey(name: 'TREATMENT_CATEGORIES_CODE') dynamic treatmentCategoriesCode,
+    // @JsonKey(name: 'PN_VERSION') int? pnVersion,
+    // @JsonKey(name: 'RESCHEDULED_FROM') dynamic rescheduledFrom,
+    // @JsonKey(name: 'CREATED_BY') String? createdBy,
+    // @JsonKey(name: 'PAS_APPOINTMENT_ID') dynamic pasAppointmentId,
+    // @JsonKey(name: 'CHAIRS_IN_CLINIC_ID') int? chairsInClinicId,
+    //  @JsonKey(name: 'FINISHED_BY') dynamic finishedBy,
+    // @JsonKey(name: 'FINISHED_DATE') dynamic finishedDate,
+    // @JsonKey(name: 'GONE_BY') dynamic goneBy,
+    //@JsonKey(name: 'GONE_DATE') dynamic goneDate,
+    // @JsonKey(name: 'API_SESSION_CODE') dynamic apiSessionCode,
+    //@JsonKey(name: 'CG_INIT_CLINIC') dynamic cgInitClinic,
+    Clinic? clinic,
+  }) = _Appointment;
+
+  factory Appointment.fromJson(Map<String, dynamic> json) =>
+      _$AppointmentFromJson(json);
+}

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "399971269403",
+    "project_id": "salud-da75e",
+    "storage_bucket": "salud-da75e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399971269403:android:5f4d9b98adc006a9d331be",
+        "android_client_info": {
+          "package_name": "com.cod.patient.services"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "399971269403-be2guf5s5m86mfk6daj6i9br6c2ssunv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtxRTIa82EMyW1YciRXW0eBKVLhOssXXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "399971269403-be2guf5s5m86mfk6daj6i9br6c2ssunv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

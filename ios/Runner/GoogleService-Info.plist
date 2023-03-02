@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>261058894559-8udj70iimld2kqs43boavpdaio5qpqva.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.261058894559-8udj70iimld2kqs43boavpdaio5qpqva</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDiYo_PRMWep0xuw4cwicwWF8dcFRLvelc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>261058894559</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.shrouqApp</string>
+	<key>PROJECT_ID</key>
+	<string>my-nailah</string>
+	<key>STORAGE_BUCKET</key>
+	<string>my-nailah.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:261058894559:ios:9975c625ff33b63885276a</string>
+</dict>
+</plist>
