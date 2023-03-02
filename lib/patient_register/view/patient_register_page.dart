@@ -100,7 +100,7 @@ class PatientRegisterForm extends StatelessWidget {
   }
 }
 
-_callNumber() async {
+callNumber() async {
   const number = '011 429 9999'; //set the number here
   bool? res = await FlutterPhoneDirectCaller.callNumber(number);
 }
@@ -217,7 +217,7 @@ Widget buildPatientRegisterForm(
                       final HOSPITALNO =
                           formKey.currentState!.value['HOSPITAL_NO'];
                       final SSN = formKey.currentState!.value['SSN'];
-                      final String TELEPHONE1 =
+                      final  TELEPHONE1 =
                           formKey.currentState!.value['TELEPHONE1'];
                       final password = formKey.currentState!.value['password'];
                       BlocProvider.of<PatientRegisterBloc>(context).add(
@@ -236,7 +236,7 @@ Widget buildPatientRegisterForm(
           TextButton.icon(
             icon: Icon(IconData(0xee78, fontFamily: 'MaterialIcons')),
             onPressed: () {
-              _callNumber();
+              callNumber();
               debugPrint("no Call");
 
               //Navigator.push(context, PatientRegisterPage.route());

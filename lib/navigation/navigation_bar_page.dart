@@ -37,6 +37,7 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
+    //verify(),
     HomePage(),
     AppointmentsPage(),
     RequestAppointment(),

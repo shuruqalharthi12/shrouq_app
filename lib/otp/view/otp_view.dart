@@ -3,6 +3,9 @@ import 'package:flutter/services.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:shrouq_app/navigation/navigation_bar_page.dart';
+import 'package:shrouq_app/login/bloc/login_bloc.dart';
+import'package:shrouq_app/login/view/login_page.dart';
+import'package:shrouq_app/patient_register/view/patient_register_page.dart';
 
 class Otp extends StatelessWidget {
   const Otp({
@@ -63,7 +66,7 @@ class _OtpScreenState extends State<OtpScreen> {
         'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImNmNDhjNGU1OWFkZmI5N2JhMGVlMjY3OWM0N2YwMzI2YWFkYWE2ZDI1MDIyNjM4NDFlNjllMDc5Yjg5MTJkZWViM2M4MzUyYWU0ZGI3MjA3ZTQ0NWY5NDU2MmJmNjk1YmZkMzAxODJiMDljZjQ5ZWU3N2FlOTU2YmExMTVlZjllIiwiaWF0IjoxNjc0MTE1MDUyLCJleHAiOjMyNTE5OTUwNTJ9.hKF5DULx0-gGwMs4tkBCJxuqCisCqoBmoDRJM_yMZx0',
     'Content-Type': 'application/json'
   };
-  var url = Uri.parse('https://apis.deewan.sa/verify/v2/verifications');
+  var url = Uri.parse('https://apis.deewan.sa/otp/v2/verifications');
   var otpPasscodeStatus;
   void checkOtp(
       {required String checkCode,
@@ -114,12 +117,12 @@ class _OtpScreenState extends State<OtpScreen> {
       appBar: AppBar(
         elevation: 0,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {LoginPage();},
           icon: const Icon(Icons.arrow_back_ios_new),
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {callNumber();},
             icon: const Icon(Icons.info),
           ),
         ],

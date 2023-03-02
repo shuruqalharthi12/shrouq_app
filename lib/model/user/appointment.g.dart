@@ -26,7 +26,7 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
               json['SUPERVISOR_TO_SEE'] as Map<String, dynamic>),
       timeStartToSee: json['TIME_START_TO_SEE'] as String?,
       timeStopToSee: json['TIME_STOP_TO_SEE'] as String?,
-      //durationToSee: json['DURATION_TO_SEE'] as String?,
+      durationToSee: json['DURATION_TO_SEE'] as String?,
       status: json['STATUS'] as String?,
       treatmentForm: json['TREATMENT_FORM'] as String?,
       timeStartSeen: json['TIME_START_SEEN'] as String?,
@@ -38,7 +38,7 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
       notesPostAppt: json['NOTES_POST_APPT'],
       mandatoryComments: json['MANDATORY_COMMENTS'],
       operator1Role: json['OPERATOR1_ROLE'] as String?,
-     // appStartCheck: json['APP_START_CHECK'] as int?,
+      appStartCheck: json['APP_START_CHECK'] as int?,
       clinic: json['clinic'] == null
           ? null
           : Clinic.fromJson(json['clinic'] as Map<String, dynamic>),
