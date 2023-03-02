@@ -1,5 +1,5 @@
 // create login view
-import 'dart:convert';
+//import 'dart:convert';
 
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -7,10 +7,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 //import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:shrouq_app/home/home.dart';
-import 'package:shrouq_app/otp_Screen.dart';
+//import 'package:shrouq_app/otp_Screen.dart';
 import 'package:shrouq_app/repository/auth_repository.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
-import 'package:http/http.dart' as http;
+//import 'package:http/http.dart' as http;
 import '../../core/constants.dart';
 import '../../home/view/home_page.dart';
 
@@ -188,7 +188,7 @@ Widget buildPatientRegisterForm(
                 labelText: 'Phone Number'.tr()),
             validator: FormBuilderValidators.compose([
               FormBuilderValidators.required(),
-              FormBuilderValidators.minLength(10),
+          //    FormBuilderValidators.minLength(10),
             ]),
           ),
           const SizedBox(
@@ -224,7 +224,7 @@ Widget buildPatientRegisterForm(
                         PatientRegisterButtonPressed(
                           HOSPITAL_NO: HOSPITALNO,
                           SSN: SSN,
-                          myContext: context,
+                          //myContext: context,
                           TELEPHONE1: TELEPHONE1,
                           password: password,
                         ),

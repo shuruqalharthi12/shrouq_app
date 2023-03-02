@@ -9,7 +9,7 @@ abstract class PatientRegisterEvent extends Equatable {
 
 class PatientRegisterButtonPressed extends PatientRegisterEvent {
   final String HOSPITAL_NO;
-  final BuildContext myContext;
+  //final BuildContext myContext;
   final String SSN;
   final String TELEPHONE1;
   final String password;
@@ -17,15 +17,15 @@ class PatientRegisterButtonPressed extends PatientRegisterEvent {
   const PatientRegisterButtonPressed({
     required this.HOSPITAL_NO,
     required this.SSN,
-    required this.myContext,
+   // required this.myContext,
     required this.TELEPHONE1,
     required this.password,
   });
 
   @override
-  List<Object> get props => [HOSPITAL_NO, SSN, TELEPHONE1,myContext];
+  List<Object> get props => [HOSPITAL_NO, SSN, TELEPHONE1];//,myContext];
 
   @override
   String toString() =>
-      'LoginButtonPressed { HOSPITAL_NO: $HOSPITAL_NO, SSN: $SSN, TELEPHONE1: $TELEPHONE1 ,password:$password,myContext:$myContext }';
+      'LoginButtonPressed { HOSPITAL_NO: $HOSPITAL_NO, SSN: $SSN, TELEPHONE1: $TELEPHONE1 ,password:$password';//,myContext:$myContext }';
 }
