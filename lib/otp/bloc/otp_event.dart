@@ -1,10 +1,9 @@
 part of 'otp_bloc.dart';
 
-abstract class OtpEvent extends Equatable {
-  const OtpEvent();
-
-  @override
-  List<Object> get props => [];
+@freezed
+class OtpEvent with _$OtpEvent {
+  const factory OtpEvent.sendOtp(String phone, BuildContext context) =
+      SendOtpEvent;
+  const factory OtpEvent.verifyOtp(String otp,String otp_passcode, BuildContext context) =
+      VerifyOtpEvent;
 }
-
-class OtpEventFetchUser extends OtpEvent {}

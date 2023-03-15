@@ -2,23 +2,18 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:bloc/bloc.dart';
-import 'package:equatable/equatable.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 //import 'package:shrouq_app/otp_view.dart';
-import 'package:shrouq_app/patient_register/view/patient_register_page.dart';
 
-import '../../model/auth/auth_exception.dart';
-import '../../model/token/token.dart';
 import 'package:shrouq_app/repository/auth_repository.dart';
 import 'package:http/http.dart' as http;
 import '../../repository/token_repository.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../view/otp_view.dart';
-
 part 'otp_event.dart';
 part 'otp_state.dart';
+part 'otp_bloc.freezed.dart';
 
 class OtpBloc extends Bloc<OtpEvent, OtpState> {
   final AuthRepository repository;
@@ -34,7 +29,65 @@ class OtpBloc extends Bloc<OtpEvent, OtpState> {
   String checkCode = '';
 
   OtpBloc(super.initialState, this.repository, this.tokenRepository);
-  sendOtp(String phone, BuildContext context) async {
+
+  Stream<OtpState> mapEventToState(
+    OtpEvent event,
+  ) async* {
+    yield* event.when(
+      sendOtp: (phone, context) async* {
+        yield const OtpState.loading();
+        try {
+          final checkCode = await sendOtp(phone);
+          if (checkCode == null) {
+            throw Exception("Oops, OTP send failed");
+          }
+          yield OtpState.loaded(checkCode, phone);
+        } catch (e) {
+          yield OtpState.error(e.toString());
+        }
+      },
+      verifyOtp: (otp, otpPassCode, context) async* {
+        yield const OtpState.loading();
+        try {
+          final isVerified = await verifyOtp(otp, otpPassCode);
+          if (isVerified) {
+            yield const OtpState.verified();
+          } else {
+            throw Exception("OTP verification failed");
+          }
+        } catch (e) {
+          yield OtpState.error(e.toString());
+        }
+      },
+    );
+  }
+
+  Future<bool> verifyOtp(String otp, String otpPassCode) async {
+    var body = {"checkCode": checkCode, "otpPasscode": otpPassCode};
+    try {
+      final response = await http.put(
+        url,
+        headers: headersList,
+        body: json.encode(body),
+      );
+      final otpPasscodeStatus =
+          json.decode(response.body)["data"]["otpPasscodeStatus"];
+      if (response.statusCode == 200) {
+        if (otpPasscodeStatus == 0) {
+          return false;
+        } else if (otpPasscodeStatus == 1) {
+          return true;
+        } else if (otpPasscodeStatus == 2) {
+          return false;
+        }
+      }
+      return false;
+    } catch (e) {
+      throw Exception("Failed to verify OTP: ${e.toString()}");
+    }
+  }
+
+  Future<String> sendOtp(String phone) async {
     var fPhone = phone.startsWith('0') ? phone.replaceFirst("0", "", 0) : phone;
     print(phone);
     var body = {
@@ -43,30 +96,21 @@ class OtpBloc extends Bloc<OtpEvent, OtpState> {
       "otpCodeLength": "4",
       "otpCodeExpiry": "3"
     };
-    await http
-        .post(
-      url,
-      headers: headersList,
-      body: json.encode(body),
-    )
-        .then((res) {
-      if (res.statusCode >= 200 && res.statusCode < 300) {
-        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-          content: Text("OTP has been sent"),
-        ));
-        print(json.decode(res.body));
-        checkCode = json.decode(res.body)["data"]["checkCode"];
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) =>
-                    OtpScreen(checkCode: checkCode, phone: phone)));
+    try {
+      final response = await http.post(
+        url,
+        headers: headersList,
+        body: json.encode(body),
+      );
+      if (response.statusCode >= 200 && response.statusCode < 300) {
+        print(json.decode(response.body));
+        final checkCode = json.decode(response.body)["data"]["checkCode"];
+        return checkCode;
       } else {
-        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-          content: Text("Oops, OTP send failed"),
-        ));
+        return "Oops, OTP send failed";
       }
-    });
+    } catch (e) {
+      return e.toString();
+    }
   }
-
 }

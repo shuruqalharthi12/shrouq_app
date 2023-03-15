@@ -7,6 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 //import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:shrouq_app/home/home.dart';
+import 'package:shrouq_app/otp/view/otp_view.dart';
 //import 'package:shrouq_app/otp_Screen.dart';
 import 'package:shrouq_app/repository/auth_repository.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
@@ -82,7 +83,12 @@ class PatientRegisterForm extends StatelessWidget {
           },
           authorized: () {
             // go to home page
-            Navigator.of(context).pushReplacement(HomePage.route());
+            final phone = _formKey.currentState!.value['TELEPHONE1'];
+            Navigator.of(context).pushReplacement(
+              MaterialPageRoute(
+                builder: (context) => const OtpPage(),
+              ),
+            );
           },
         );
       },
@@ -188,7 +194,7 @@ Widget buildPatientRegisterForm(
                 labelText: 'Phone Number'.tr()),
             validator: FormBuilderValidators.compose([
               FormBuilderValidators.required(),
-          //    FormBuilderValidators.minLength(10),
+              //    FormBuilderValidators.minLength(10),
             ]),
           ),
           const SizedBox(
@@ -217,7 +223,7 @@ Widget buildPatientRegisterForm(
                       final HOSPITALNO =
                           formKey.currentState!.value['HOSPITAL_NO'];
                       final SSN = formKey.currentState!.value['SSN'];
-                      final  TELEPHONE1 =
+                      final TELEPHONE1 =
                           formKey.currentState!.value['TELEPHONE1'];
                       final password = formKey.currentState!.value['password'];
                       BlocProvider.of<PatientRegisterBloc>(context).add(
