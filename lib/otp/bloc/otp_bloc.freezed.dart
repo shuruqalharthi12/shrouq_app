@@ -16,27 +16,22 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$OtpEvent {
-  BuildContext get context => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String phone, BuildContext context) sendOtp,
-    required TResult Function(
-            String otp, String otp_passcode, BuildContext context)
-        verifyOtp,
+    required TResult Function(String phone) sendOtp,
+    required TResult Function(String otp, String otp_passcode) verifyOtp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String phone, BuildContext context)? sendOtp,
-    TResult? Function(String otp, String otp_passcode, BuildContext context)?
-        verifyOtp,
+    TResult? Function(String phone)? sendOtp,
+    TResult? Function(String otp, String otp_passcode)? verifyOtp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String phone, BuildContext context)? sendOtp,
-    TResult Function(String otp, String otp_passcode, BuildContext context)?
-        verifyOtp,
+    TResult Function(String phone)? sendOtp,
+    TResult Function(String otp, String otp_passcode)? verifyOtp,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -59,18 +54,12 @@ mixin _$OtpEvent {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $OtpEventCopyWith<OtpEvent> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $OtpEventCopyWith<$Res> {
   factory $OtpEventCopyWith(OtpEvent value, $Res Function(OtpEvent) then) =
       _$OtpEventCopyWithImpl<$Res, OtpEvent>;
-  @useResult
-  $Res call({BuildContext context});
 }
 
 /// @nodoc
@@ -82,30 +71,15 @@ class _$OtpEventCopyWithImpl<$Res, $Val extends OtpEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? context = null,
-  }) {
-    return _then(_value.copyWith(
-      context: null == context
-          ? _value.context
-          : context // ignore: cast_nullable_to_non_nullable
-              as BuildContext,
-    ) as $Val);
-  }
 }
 
 /// @nodoc
-abstract class _$$SendOtpEventCopyWith<$Res>
-    implements $OtpEventCopyWith<$Res> {
+abstract class _$$SendOtpEventCopyWith<$Res> {
   factory _$$SendOtpEventCopyWith(
           _$SendOtpEvent value, $Res Function(_$SendOtpEvent) then) =
       __$$SendOtpEventCopyWithImpl<$Res>;
-  @override
   @useResult
-  $Res call({String phone, BuildContext context});
+  $Res call({String phone});
 }
 
 /// @nodoc
@@ -120,17 +94,12 @@ class __$$SendOtpEventCopyWithImpl<$Res>
   @override
   $Res call({
     Object? phone = null,
-    Object? context = null,
   }) {
     return _then(_$SendOtpEvent(
       null == phone
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
               as String,
-      null == context
-          ? _value.context
-          : context // ignore: cast_nullable_to_non_nullable
-              as BuildContext,
     ));
   }
 }
@@ -138,16 +107,14 @@ class __$$SendOtpEventCopyWithImpl<$Res>
 /// @nodoc
 
 class _$SendOtpEvent implements SendOtpEvent {
-  const _$SendOtpEvent(this.phone, this.context);
+  const _$SendOtpEvent(this.phone);
 
   @override
   final String phone;
-  @override
-  final BuildContext context;
 
   @override
   String toString() {
-    return 'OtpEvent.sendOtp(phone: $phone, context: $context)';
+    return 'OtpEvent.sendOtp(phone: $phone)';
   }
 
   @override
@@ -155,12 +122,11 @@ class _$SendOtpEvent implements SendOtpEvent {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SendOtpEvent &&
-            (identical(other.phone, phone) || other.phone == phone) &&
-            (identical(other.context, context) || other.context == context));
+            (identical(other.phone, phone) || other.phone == phone));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, phone, context);
+  int get hashCode => Object.hash(runtimeType, phone);
 
   @JsonKey(ignore: true)
   @override
@@ -171,34 +137,30 @@ class _$SendOtpEvent implements SendOtpEvent {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String phone, BuildContext context) sendOtp,
-    required TResult Function(
-            String otp, String otp_passcode, BuildContext context)
-        verifyOtp,
+    required TResult Function(String phone) sendOtp,
+    required TResult Function(String otp, String otp_passcode) verifyOtp,
   }) {
-    return sendOtp(phone, context);
+    return sendOtp(phone);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String phone, BuildContext context)? sendOtp,
-    TResult? Function(String otp, String otp_passcode, BuildContext context)?
-        verifyOtp,
+    TResult? Function(String phone)? sendOtp,
+    TResult? Function(String otp, String otp_passcode)? verifyOtp,
   }) {
-    return sendOtp?.call(phone, context);
+    return sendOtp?.call(phone);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String phone, BuildContext context)? sendOtp,
-    TResult Function(String otp, String otp_passcode, BuildContext context)?
-        verifyOtp,
+    TResult Function(String phone)? sendOtp,
+    TResult Function(String otp, String otp_passcode)? verifyOtp,
     required TResult orElse(),
   }) {
     if (sendOtp != null) {
-      return sendOtp(phone, context);
+      return sendOtp(phone);
     }
     return orElse();
   }
@@ -236,27 +198,21 @@ class _$SendOtpEvent implements SendOtpEvent {
 }
 
 abstract class SendOtpEvent implements OtpEvent {
-  const factory SendOtpEvent(final String phone, final BuildContext context) =
-      _$SendOtpEvent;
+  const factory SendOtpEvent(final String phone) = _$SendOtpEvent;
 
   String get phone;
-  @override
-  BuildContext get context;
-  @override
   @JsonKey(ignore: true)
   _$$SendOtpEventCopyWith<_$SendOtpEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$VerifyOtpEventCopyWith<$Res>
-    implements $OtpEventCopyWith<$Res> {
+abstract class _$$VerifyOtpEventCopyWith<$Res> {
   factory _$$VerifyOtpEventCopyWith(
           _$VerifyOtpEvent value, $Res Function(_$VerifyOtpEvent) then) =
       __$$VerifyOtpEventCopyWithImpl<$Res>;
-  @override
   @useResult
-  $Res call({String otp, String otp_passcode, BuildContext context});
+  $Res call({String otp, String otp_passcode});
 }
 
 /// @nodoc
@@ -272,7 +228,6 @@ class __$$VerifyOtpEventCopyWithImpl<$Res>
   $Res call({
     Object? otp = null,
     Object? otp_passcode = null,
-    Object? context = null,
   }) {
     return _then(_$VerifyOtpEvent(
       null == otp
@@ -283,10 +238,6 @@ class __$$VerifyOtpEventCopyWithImpl<$Res>
           ? _value.otp_passcode
           : otp_passcode // ignore: cast_nullable_to_non_nullable
               as String,
-      null == context
-          ? _value.context
-          : context // ignore: cast_nullable_to_non_nullable
-              as BuildContext,
     ));
   }
 }
@@ -294,18 +245,16 @@ class __$$VerifyOtpEventCopyWithImpl<$Res>
 /// @nodoc
 
 class _$VerifyOtpEvent implements VerifyOtpEvent {
-  const _$VerifyOtpEvent(this.otp, this.otp_passcode, this.context);
+  const _$VerifyOtpEvent(this.otp, this.otp_passcode);
 
   @override
   final String otp;
   @override
   final String otp_passcode;
-  @override
-  final BuildContext context;
 
   @override
   String toString() {
-    return 'OtpEvent.verifyOtp(otp: $otp, otp_passcode: $otp_passcode, context: $context)';
+    return 'OtpEvent.verifyOtp(otp: $otp, otp_passcode: $otp_passcode)';
   }
 
   @override
@@ -315,12 +264,11 @@ class _$VerifyOtpEvent implements VerifyOtpEvent {
             other is _$VerifyOtpEvent &&
             (identical(other.otp, otp) || other.otp == otp) &&
             (identical(other.otp_passcode, otp_passcode) ||
-                other.otp_passcode == otp_passcode) &&
-            (identical(other.context, context) || other.context == context));
+                other.otp_passcode == otp_passcode));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, otp, otp_passcode, context);
+  int get hashCode => Object.hash(runtimeType, otp, otp_passcode);
 
   @JsonKey(ignore: true)
   @override
@@ -331,34 +279,30 @@ class _$VerifyOtpEvent implements VerifyOtpEvent {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String phone, BuildContext context) sendOtp,
-    required TResult Function(
-            String otp, String otp_passcode, BuildContext context)
-        verifyOtp,
+    required TResult Function(String phone) sendOtp,
+    required TResult Function(String otp, String otp_passcode) verifyOtp,
   }) {
-    return verifyOtp(otp, otp_passcode, context);
+    return verifyOtp(otp, otp_passcode);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String phone, BuildContext context)? sendOtp,
-    TResult? Function(String otp, String otp_passcode, BuildContext context)?
-        verifyOtp,
+    TResult? Function(String phone)? sendOtp,
+    TResult? Function(String otp, String otp_passcode)? verifyOtp,
   }) {
-    return verifyOtp?.call(otp, otp_passcode, context);
+    return verifyOtp?.call(otp, otp_passcode);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String phone, BuildContext context)? sendOtp,
-    TResult Function(String otp, String otp_passcode, BuildContext context)?
-        verifyOtp,
+    TResult Function(String phone)? sendOtp,
+    TResult Function(String otp, String otp_passcode)? verifyOtp,
     required TResult orElse(),
   }) {
     if (verifyOtp != null) {
-      return verifyOtp(otp, otp_passcode, context);
+      return verifyOtp(otp, otp_passcode);
     }
     return orElse();
   }
@@ -396,14 +340,11 @@ class _$VerifyOtpEvent implements VerifyOtpEvent {
 }
 
 abstract class VerifyOtpEvent implements OtpEvent {
-  const factory VerifyOtpEvent(final String otp, final String otp_passcode,
-      final BuildContext context) = _$VerifyOtpEvent;
+  const factory VerifyOtpEvent(final String otp, final String otp_passcode) =
+      _$VerifyOtpEvent;
 
   String get otp;
   String get otp_passcode;
-  @override
-  BuildContext get context;
-  @override
   @JsonKey(ignore: true)
   _$$VerifyOtpEventCopyWith<_$VerifyOtpEvent> get copyWith =>
       throw _privateConstructorUsedError;

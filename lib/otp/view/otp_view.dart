@@ -35,7 +35,7 @@ class _OtpPageState extends State<OtpPage> {
           const OtpState.initial(),
           AuthRepository(),
           TokenRepository(),
-        ),
+        )..add(OtpEvent.sendOtp('phone')),
         child: BlocConsumer<OtpBloc, OtpState>(
           listener: (context, state) {
             state.when(

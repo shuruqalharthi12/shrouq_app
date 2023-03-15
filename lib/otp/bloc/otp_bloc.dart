@@ -34,7 +34,7 @@ class OtpBloc extends Bloc<OtpEvent, OtpState> {
     OtpEvent event,
   ) async* {
     yield* event.when(
-      sendOtp: (phone, context) async* {
+      sendOtp: (phone) async* {
         yield const OtpState.loading();
         try {
           final checkCode = await sendOtp(phone);
@@ -46,7 +46,7 @@ class OtpBloc extends Bloc<OtpEvent, OtpState> {
           yield OtpState.error(e.toString());
         }
       },
-      verifyOtp: (otp, otpPassCode, context) async* {
+      verifyOtp: (otp, otpPassCode) async* {
         yield const OtpState.loading();
         try {
           final isVerified = await verifyOtp(otp, otpPassCode);
