@@ -82,7 +82,7 @@ class _OtpPageState extends State<OtpPage> {
                         loading: () => null,
                         loaded: (checkCode, phone) {
                           BlocProvider.of<OtpBloc>(context).add(
-                            OtpEvent.verifyOtp(checkCode, pin, context),
+                            OtpEvent.verifyOtp(checkCode, pin),
                           );
                         },
                         verified: () => null,
