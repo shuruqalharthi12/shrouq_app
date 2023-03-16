@@ -40,8 +40,8 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
     //verify(),
     HomePage(),
     AppointmentsPage(),
-    RequestAppointment(),
-    //BookAppointmentPage(),
+    //RequestAppointment(),
+    BookAppointmentPage(),
     NotificationPage(),
     ProfilePage(),
 

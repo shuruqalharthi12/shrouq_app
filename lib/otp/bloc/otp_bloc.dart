@@ -26,44 +26,43 @@ class OtpBloc extends Bloc<OtpEvent, OtpState> {
     'Content-Type': 'application/json'
   };
   var url = Uri.parse('https://apis.deewan.sa/verify/v2/verifications');
-  String checkCode = '';
 
-  OtpBloc(super.initialState, this.repository, this.tokenRepository);
+  OtpBloc(this.repository, this.tokenRepository)
+      : super(const OtpState.initial()) {
+    on<OtpEvent>((event, emit) async {
+      await event.when(
+        sendOtp: (phone) async {
+          emit(const OtpState.loading());
+          try {
+            final checkCode = await sendOtp(phone);
+            if (checkCode == null) {
+              throw Exception("Oops, OTP send failed");
+            }
+            emit(OtpState.loaded(checkCode, phone));
+          } catch (e) {
+            emit(OtpState.error(e.toString()));
+          }
+        },
+        verifyOtp: (otp, otpPassCode) async {
+          emit(const OtpState.loading());
+          try {
+            final isVerified = await verifyOtp(otp, otpPassCode);
 
-  Stream<OtpState> mapEventToState(
-    OtpEvent event,
-  ) async* {
-    yield* event.when(
-      sendOtp: (phone) async* {
-        yield const OtpState.loading();
-        try {
-          final checkCode = await sendOtp(phone);
-          if (checkCode == null) {
-            throw Exception("Oops, OTP send failed");
+            if (isVerified) {
+              emit(const OtpState.verified());
+            } else {
+              throw Exception("OTP verification failed");
+            }
+          } catch (e) {
+            emit(OtpState.error(e.toString()));
           }
-          yield OtpState.loaded(checkCode, phone);
-        } catch (e) {
-          yield OtpState.error(e.toString());
-        }
-      },
-      verifyOtp: (otp, otpPassCode) async* {
-        yield const OtpState.loading();
-        try {
-          final isVerified = await verifyOtp(otp, otpPassCode);
-          if (isVerified) {
-            yield const OtpState.verified();
-          } else {
-            throw Exception("OTP verification failed");
-          }
-        } catch (e) {
-          yield OtpState.error(e.toString());
-        }
-      },
-    );
+        },
+      );
+    });
   }
 
   Future<bool> verifyOtp(String otp, String otpPassCode) async {
-    var body = {"checkCode": checkCode, "otpPasscode": otpPassCode};
+    var body = {"checkCode": otp, "otpPasscode": otpPassCode};
     try {
       final response = await http.put(
         url,

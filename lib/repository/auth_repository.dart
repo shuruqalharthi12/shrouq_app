@@ -85,7 +85,7 @@ class AuthRepository implements AuthImpl {
         if (result.data != null) {
           // token
           final token = Token.fromJson(result.data);
-          _controller.add(AuthenticationStatus.authenticated);
+         // _controller.add(AuthenticationStatus.authenticated);
           return right(token);
         } else {
           return left(const AuthException.wrongEmailOrPass());
