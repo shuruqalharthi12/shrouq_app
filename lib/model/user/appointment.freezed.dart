@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'appointment.dart';
 
@@ -47,7 +47,7 @@ mixin _$Appointment {
   @JsonKey(name: 'TIME_STOP_TO_SEE')
   String? get timeStopToSee => throw _privateConstructorUsedError;
   @JsonKey(name: 'DURATION_TO_SEE')
-  String? get durationToSee => throw _privateConstructorUsedError;
+  num? get durationToSee => throw _privateConstructorUsedError;
   @JsonKey(name: 'STATUS')
   String? get status => throw _privateConstructorUsedError;
   @JsonKey(name: 'TREATMENT_FORM')
@@ -142,7 +142,7 @@ abstract class $AppointmentCopyWith<$Res> {
       @JsonKey(name: 'SUPERVISOR_TO_SEE') Operator? supervisorToSee,
       @JsonKey(name: 'TIME_START_TO_SEE') String? timeStartToSee,
       @JsonKey(name: 'TIME_STOP_TO_SEE') String? timeStopToSee,
-      @JsonKey(name: 'DURATION_TO_SEE') String? durationToSee,
+      @JsonKey(name: 'DURATION_TO_SEE') num? durationToSee,
       @JsonKey(name: 'STATUS') String? status,
       @JsonKey(name: 'TREATMENT_FORM') String? treatmentForm,
       @JsonKey(name: 'TIME_START_SEEN') String? timeStartSeen,
@@ -180,11 +180,11 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
     Object? type = freezed,
     Object? hospitalNo = freezed,
     Object? episodeNo = freezed,
-    Object? wlEntryNo = null,
+    Object? wlEntryNo = freezed,
     Object? operator1ToSee = freezed,
     Object? op1TxArea = freezed,
-    Object? operator2ToSee = null,
-    Object? op2TxArea = null,
+    Object? operator2ToSee = freezed,
+    Object? op2TxArea = freezed,
     Object? supervisorToSee = freezed,
     Object? timeStartToSee = freezed,
     Object? timeStopToSee = freezed,
@@ -195,10 +195,10 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
     Object? timeStopSeen = freezed,
     Object? durationSeen = freezed,
     Object? operator1Seen = freezed,
-    Object? operator2Seen = null,
-    Object? supervisorSeen = null,
-    Object? notesPostAppt = null,
-    Object? mandatoryComments = null,
+    Object? operator2Seen = freezed,
+    Object? supervisorSeen = freezed,
+    Object? notesPostAppt = freezed,
+    Object? mandatoryComments = freezed,
     Object? operator1Role = freezed,
     Object? appStartCheck = freezed,
     Object? clinic = freezed,
@@ -224,7 +224,7 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
           ? _value.episodeNo
           : episodeNo // ignore: cast_nullable_to_non_nullable
               as String?,
-      wlEntryNo: null == wlEntryNo
+      wlEntryNo: freezed == wlEntryNo
           ? _value.wlEntryNo
           : wlEntryNo // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -236,11 +236,11 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
           ? _value.op1TxArea
           : op1TxArea // ignore: cast_nullable_to_non_nullable
               as String?,
-      operator2ToSee: null == operator2ToSee
+      operator2ToSee: freezed == operator2ToSee
           ? _value.operator2ToSee
           : operator2ToSee // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      op2TxArea: null == op2TxArea
+      op2TxArea: freezed == op2TxArea
           ? _value.op2TxArea
           : op2TxArea // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -259,7 +259,7 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
       durationToSee: freezed == durationToSee
           ? _value.durationToSee
           : durationToSee // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as num?,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -284,19 +284,19 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
           ? _value.operator1Seen
           : operator1Seen // ignore: cast_nullable_to_non_nullable
               as String?,
-      operator2Seen: null == operator2Seen
+      operator2Seen: freezed == operator2Seen
           ? _value.operator2Seen
           : operator2Seen // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      supervisorSeen: null == supervisorSeen
+      supervisorSeen: freezed == supervisorSeen
           ? _value.supervisorSeen
           : supervisorSeen // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      notesPostAppt: null == notesPostAppt
+      notesPostAppt: freezed == notesPostAppt
           ? _value.notesPostAppt
           : notesPostAppt // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      mandatoryComments: null == mandatoryComments
+      mandatoryComments: freezed == mandatoryComments
           ? _value.mandatoryComments
           : mandatoryComments // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -374,7 +374,7 @@ abstract class _$$_AppointmentCopyWith<$Res>
       @JsonKey(name: 'SUPERVISOR_TO_SEE') Operator? supervisorToSee,
       @JsonKey(name: 'TIME_START_TO_SEE') String? timeStartToSee,
       @JsonKey(name: 'TIME_STOP_TO_SEE') String? timeStopToSee,
-      @JsonKey(name: 'DURATION_TO_SEE') String? durationToSee,
+      @JsonKey(name: 'DURATION_TO_SEE') num? durationToSee,
       @JsonKey(name: 'STATUS') String? status,
       @JsonKey(name: 'TREATMENT_FORM') String? treatmentForm,
       @JsonKey(name: 'TIME_START_SEEN') String? timeStartSeen,
@@ -413,11 +413,11 @@ class __$$_AppointmentCopyWithImpl<$Res>
     Object? type = freezed,
     Object? hospitalNo = freezed,
     Object? episodeNo = freezed,
-    Object? wlEntryNo = null,
+    Object? wlEntryNo = freezed,
     Object? operator1ToSee = freezed,
     Object? op1TxArea = freezed,
-    Object? operator2ToSee = null,
-    Object? op2TxArea = null,
+    Object? operator2ToSee = freezed,
+    Object? op2TxArea = freezed,
     Object? supervisorToSee = freezed,
     Object? timeStartToSee = freezed,
     Object? timeStopToSee = freezed,
@@ -428,10 +428,10 @@ class __$$_AppointmentCopyWithImpl<$Res>
     Object? timeStopSeen = freezed,
     Object? durationSeen = freezed,
     Object? operator1Seen = freezed,
-    Object? operator2Seen = null,
-    Object? supervisorSeen = null,
-    Object? notesPostAppt = null,
-    Object? mandatoryComments = null,
+    Object? operator2Seen = freezed,
+    Object? supervisorSeen = freezed,
+    Object? notesPostAppt = freezed,
+    Object? mandatoryComments = freezed,
     Object? operator1Role = freezed,
     Object? appStartCheck = freezed,
     Object? clinic = freezed,
@@ -457,7 +457,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
           ? _value.episodeNo
           : episodeNo // ignore: cast_nullable_to_non_nullable
               as String?,
-      wlEntryNo: null == wlEntryNo
+      wlEntryNo: freezed == wlEntryNo
           ? _value.wlEntryNo
           : wlEntryNo // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -469,11 +469,11 @@ class __$$_AppointmentCopyWithImpl<$Res>
           ? _value.op1TxArea
           : op1TxArea // ignore: cast_nullable_to_non_nullable
               as String?,
-      operator2ToSee: null == operator2ToSee
+      operator2ToSee: freezed == operator2ToSee
           ? _value.operator2ToSee
           : operator2ToSee // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      op2TxArea: null == op2TxArea
+      op2TxArea: freezed == op2TxArea
           ? _value.op2TxArea
           : op2TxArea // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -492,7 +492,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
       durationToSee: freezed == durationToSee
           ? _value.durationToSee
           : durationToSee // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as num?,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -517,19 +517,19 @@ class __$$_AppointmentCopyWithImpl<$Res>
           ? _value.operator1Seen
           : operator1Seen // ignore: cast_nullable_to_non_nullable
               as String?,
-      operator2Seen: null == operator2Seen
+      operator2Seen: freezed == operator2Seen
           ? _value.operator2Seen
           : operator2Seen // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      supervisorSeen: null == supervisorSeen
+      supervisorSeen: freezed == supervisorSeen
           ? _value.supervisorSeen
           : supervisorSeen // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      notesPostAppt: null == notesPostAppt
+      notesPostAppt: freezed == notesPostAppt
           ? _value.notesPostAppt
           : notesPostAppt // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      mandatoryComments: null == mandatoryComments
+      mandatoryComments: freezed == mandatoryComments
           ? _value.mandatoryComments
           : mandatoryComments // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -625,7 +625,7 @@ class _$_Appointment implements _Appointment {
   final String? timeStopToSee;
   @override
   @JsonKey(name: 'DURATION_TO_SEE')
-  final String? durationToSee;
+  final num? durationToSee;
   @override
   @JsonKey(name: 'STATUS')
   final String? status;
@@ -830,7 +830,7 @@ abstract class _Appointment implements Appointment {
       @JsonKey(name: 'SUPERVISOR_TO_SEE') final Operator? supervisorToSee,
       @JsonKey(name: 'TIME_START_TO_SEE') final String? timeStartToSee,
       @JsonKey(name: 'TIME_STOP_TO_SEE') final String? timeStopToSee,
-      @JsonKey(name: 'DURATION_TO_SEE') final String? durationToSee,
+      @JsonKey(name: 'DURATION_TO_SEE') final num? durationToSee,
       @JsonKey(name: 'STATUS') final String? status,
       @JsonKey(name: 'TREATMENT_FORM') final String? treatmentForm,
       @JsonKey(name: 'TIME_START_SEEN') final String? timeStartSeen,
@@ -889,7 +889,7 @@ abstract class _Appointment implements Appointment {
   String? get timeStopToSee;
   @override
   @JsonKey(name: 'DURATION_TO_SEE')
-  String? get durationToSee;
+  num? get durationToSee;
   @override
   @JsonKey(name: 'STATUS')
   String? get status;

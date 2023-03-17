@@ -98,13 +98,17 @@ class _BookAppointmentViewState extends State<BookAppointmentView> {
                           subtitle: Wrap(
                               alignment: WrapAlignment.spaceAround,
                               children: List.generate(
-                                  int.parse(appointment.slots!), (index) {
+                                  (appointment.slots!).toInt(), (index) {
                                 bookAvaliableDate
                                     .add(Duration(minutes: 30 * index));
                                 return Padding(
                                     padding: EdgeInsets.all(2),
                                     child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          ScaffoldMessenger.of(context).showSnackBar(
+                                            SnackBar(content: Text("your appointment is booked").tr())
+                                          );
+                                        },
                                         child: Text(
                                             "${bookAvaliableDate.add(Duration(minutes: 30 * index)).hour < 10 ? '0${bookAvaliableDate.add(Duration(minutes: 30 * index)).hour}' : bookAvaliableDate.add(Duration(minutes: 30 * index)).hour}:${bookAvaliableDate.add(Duration(minutes: 30 * index)).minute < 10 ? '0${bookAvaliableDate.add(Duration(minutes: 30 * index)).minute}' : bookAvaliableDate.add(Duration(minutes: 30 * index)).minute} ")));
                               })),

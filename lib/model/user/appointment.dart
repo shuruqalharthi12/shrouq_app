@@ -22,7 +22,7 @@ class Appointment with _$Appointment {
     @JsonKey(name: 'SUPERVISOR_TO_SEE') Operator? supervisorToSee,
     @JsonKey(name: 'TIME_START_TO_SEE') String? timeStartToSee,
     @JsonKey(name: 'TIME_STOP_TO_SEE') String? timeStopToSee,
-    @JsonKey(name: 'DURATION_TO_SEE') String? durationToSee,
+    @JsonKey(name: 'DURATION_TO_SEE') num? durationToSee,
     @JsonKey(name: 'STATUS') String? status,
     @JsonKey(name: 'TREATMENT_FORM') String? treatmentForm,
     // @JsonKey(name: 'NOTES') dynamic notes,

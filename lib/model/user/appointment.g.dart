@@ -26,7 +26,7 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
               json['SUPERVISOR_TO_SEE'] as Map<String, dynamic>),
       timeStartToSee: json['TIME_START_TO_SEE'] as String?,
       timeStopToSee: json['TIME_STOP_TO_SEE'] as String?,
-      //durationToSee: json['DURATION_TO_SEE'] as String?,
+      durationToSee: json['DURATION_TO_SEE'] as num?,
       status: json['STATUS'] as String?,
       treatmentForm: json['TREATMENT_FORM'] as String?,
       timeStartSeen: json['TIME_START_SEEN'] as String?,

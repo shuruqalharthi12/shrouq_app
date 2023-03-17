@@ -8,7 +8,7 @@ part of 'user_notifications.dart';
 
 _$_UserNotifications _$$_UserNotificationsFromJson(Map<String, dynamic> json) =>
     _$_UserNotifications(
-      hospitalNo: json['HOSPITAL_NO'] as int?,
+      hospitalNo: json['HOSPITAL_NO'] as String?,
       messageTitle: json['MESSAGE_TITLE'] as String?,
       messageBody: json['MESSAGE_BODY'] as String?,
       dateCreated: json['DATE_CREATED'] as String?,

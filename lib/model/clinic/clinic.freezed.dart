@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'clinic.dart';
 
@@ -35,47 +35,25 @@ mixin _$Clinic {
   @JsonKey(name: 'LEAD_OPERATOR')
   dynamic get leadOperator => throw _privateConstructorUsedError;
   @JsonKey(name: 'SLOT_LENGTH')
-  String? get slotLength => throw _privateConstructorUsedError;
+  num? get slotLength => throw _privateConstructorUsedError;
   @JsonKey(name: 'SLOTS')
-  String? get slots => throw _privateConstructorUsedError;
+  num? get slots => throw _privateConstructorUsedError;
   @JsonKey(name: 'SEATS')
-  String? get seats => throw _privateConstructorUsedError;
+  num? get seats => throw _privateConstructorUsedError;
   @JsonKey(name: 'NOTES')
   dynamic get notes => throw _privateConstructorUsedError;
   @JsonKey(name: 'STATUS')
   String? get status => throw _privateConstructorUsedError;
   @JsonKey(name: 'CAPACITY')
-  String? get capacity => throw _privateConstructorUsedError;
+  num? get capacity => throw _privateConstructorUsedError;
   @JsonKey(name: 'AVG_CAPACITY')
-  String? get avgCapacity => throw _privateConstructorUsedError;
-  @JsonKey(name: 'ARCHIVE')
-  String? get archive => throw _privateConstructorUsedError;
+  num? get avgCapacity => throw _privateConstructorUsedError;
   @JsonKey(name: 'SLOT_VIEW')
   String? get slotView => throw _privateConstructorUsedError;
   @JsonKey(name: 'APPOINTMENTS')
-  String? get appointments => throw _privateConstructorUsedError;
+  num? get appointments => throw _privateConstructorUsedError;
   @JsonKey(name: 'USED_SLOTS')
-  String? get usedSlots => throw _privateConstructorUsedError;
-  @JsonKey(name: 'TREATMENT_FORM')
-  String? get treatmentForm => throw _privateConstructorUsedError;
-  @JsonKey(name: 'APPT_TYPE')
-  String? get apptType => throw _privateConstructorUsedError;
-  @JsonKey(name: 'CSSD_ORDERED')
-  String? get cssdOrdered => throw _privateConstructorUsedError;
-  @JsonKey(name: 'REQ_CHAIR_BOOK')
-  int? get reqChairBook => throw _privateConstructorUsedError;
-  @JsonKey(name: 'TX_AREA')
-  dynamic get txArea => throw _privateConstructorUsedError;
-  @JsonKey(name: 'ROT_TYPE')
-  dynamic get rotType => throw _privateConstructorUsedError;
-  @JsonKey(name: 'ACTIVITY_TYPE')
-  dynamic get activityType => throw _privateConstructorUsedError;
-  @JsonKey(name: 'DISCIPLINE_CODE')
-  String? get disciplineCode => throw _privateConstructorUsedError;
-  @JsonKey(name: 'PLACE_OF_SERVICE')
-  dynamic get placeOfService => throw _privateConstructorUsedError;
-  @JsonKey(name: 'ALLOW_STU_BOOKING')
-  String? get allowStuBooking => throw _privateConstructorUsedError;
+  num? get usedSlots => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -95,27 +73,16 @@ abstract class $ClinicCopyWith<$Res> {
       @JsonKey(name: 'STOP_TIME') String? stopTime,
       @JsonKey(name: 'CLINIC_SESSION') String? clinicSession,
       @JsonKey(name: 'LEAD_OPERATOR') dynamic leadOperator,
-      @JsonKey(name: 'SLOT_LENGTH') String? slotLength,
-      @JsonKey(name: 'SLOTS') String? slots,
-      @JsonKey(name: 'SEATS') String? seats,
+      @JsonKey(name: 'SLOT_LENGTH') num? slotLength,
+      @JsonKey(name: 'SLOTS') num? slots,
+      @JsonKey(name: 'SEATS') num? seats,
       @JsonKey(name: 'NOTES') dynamic notes,
       @JsonKey(name: 'STATUS') String? status,
-      @JsonKey(name: 'CAPACITY') String? capacity,
-      @JsonKey(name: 'AVG_CAPACITY') String? avgCapacity,
-      @JsonKey(name: 'ARCHIVE') String? archive,
+      @JsonKey(name: 'CAPACITY') num? capacity,
+      @JsonKey(name: 'AVG_CAPACITY') num? avgCapacity,
       @JsonKey(name: 'SLOT_VIEW') String? slotView,
-      @JsonKey(name: 'APPOINTMENTS') String? appointments,
-      @JsonKey(name: 'USED_SLOTS') String? usedSlots,
-      @JsonKey(name: 'TREATMENT_FORM') String? treatmentForm,
-      @JsonKey(name: 'APPT_TYPE') String? apptType,
-      @JsonKey(name: 'CSSD_ORDERED') String? cssdOrdered,
-      @JsonKey(name: 'REQ_CHAIR_BOOK') int? reqChairBook,
-      @JsonKey(name: 'TX_AREA') dynamic txArea,
-      @JsonKey(name: 'ROT_TYPE') dynamic rotType,
-      @JsonKey(name: 'ACTIVITY_TYPE') dynamic activityType,
-      @JsonKey(name: 'DISCIPLINE_CODE') String? disciplineCode,
-      @JsonKey(name: 'PLACE_OF_SERVICE') dynamic placeOfService,
-      @JsonKey(name: 'ALLOW_STU_BOOKING') String? allowStuBooking});
+      @JsonKey(name: 'APPOINTMENTS') num? appointments,
+      @JsonKey(name: 'USED_SLOTS') num? usedSlots});
 }
 
 /// @nodoc
@@ -137,28 +104,17 @@ class _$ClinicCopyWithImpl<$Res, $Val extends Clinic>
     Object? startTime = freezed,
     Object? stopTime = freezed,
     Object? clinicSession = freezed,
-    Object? leadOperator = null,
+    Object? leadOperator = freezed,
     Object? slotLength = freezed,
     Object? slots = freezed,
     Object? seats = freezed,
-    Object? notes = null,
+    Object? notes = freezed,
     Object? status = freezed,
     Object? capacity = freezed,
     Object? avgCapacity = freezed,
-    Object? archive = freezed,
     Object? slotView = freezed,
     Object? appointments = freezed,
     Object? usedSlots = freezed,
-    Object? treatmentForm = freezed,
-    Object? apptType = freezed,
-    Object? cssdOrdered = freezed,
-    Object? reqChairBook = freezed,
-    Object? txArea = null,
-    Object? rotType = null,
-    Object? activityType = null,
-    Object? disciplineCode = freezed,
-    Object? placeOfService = null,
-    Object? allowStuBooking = freezed,
   }) {
     return _then(_value.copyWith(
       clinicCode: freezed == clinicCode
@@ -185,23 +141,23 @@ class _$ClinicCopyWithImpl<$Res, $Val extends Clinic>
           ? _value.clinicSession
           : clinicSession // ignore: cast_nullable_to_non_nullable
               as String?,
-      leadOperator: null == leadOperator
+      leadOperator: freezed == leadOperator
           ? _value.leadOperator
           : leadOperator // ignore: cast_nullable_to_non_nullable
               as dynamic,
       slotLength: freezed == slotLength
           ? _value.slotLength
           : slotLength // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as num?,
       slots: freezed == slots
           ? _value.slots
           : slots // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as num?,
       seats: freezed == seats
           ? _value.seats
           : seats // ignore: cast_nullable_to_non_nullable
-              as String?,
-      notes: null == notes
+              as num?,
+      notes: freezed == notes
           ? _value.notes
           : notes // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -212,15 +168,11 @@ class _$ClinicCopyWithImpl<$Res, $Val extends Clinic>
       capacity: freezed == capacity
           ? _value.capacity
           : capacity // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as num?,
       avgCapacity: freezed == avgCapacity
           ? _value.avgCapacity
           : avgCapacity // ignore: cast_nullable_to_non_nullable
-              as String?,
-      archive: freezed == archive
-          ? _value.archive
-          : archive // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as num?,
       slotView: freezed == slotView
           ? _value.slotView
           : slotView // ignore: cast_nullable_to_non_nullable
@@ -228,51 +180,11 @@ class _$ClinicCopyWithImpl<$Res, $Val extends Clinic>
       appointments: freezed == appointments
           ? _value.appointments
           : appointments // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as num?,
       usedSlots: freezed == usedSlots
           ? _value.usedSlots
           : usedSlots // ignore: cast_nullable_to_non_nullable
-              as String?,
-      treatmentForm: freezed == treatmentForm
-          ? _value.treatmentForm
-          : treatmentForm // ignore: cast_nullable_to_non_nullable
-              as String?,
-      apptType: freezed == apptType
-          ? _value.apptType
-          : apptType // ignore: cast_nullable_to_non_nullable
-              as String?,
-      cssdOrdered: freezed == cssdOrdered
-          ? _value.cssdOrdered
-          : cssdOrdered // ignore: cast_nullable_to_non_nullable
-              as String?,
-      reqChairBook: freezed == reqChairBook
-          ? _value.reqChairBook
-          : reqChairBook // ignore: cast_nullable_to_non_nullable
-              as int?,
-      txArea: null == txArea
-          ? _value.txArea
-          : txArea // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      rotType: null == rotType
-          ? _value.rotType
-          : rotType // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      activityType: null == activityType
-          ? _value.activityType
-          : activityType // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      disciplineCode: freezed == disciplineCode
-          ? _value.disciplineCode
-          : disciplineCode // ignore: cast_nullable_to_non_nullable
-              as String?,
-      placeOfService: null == placeOfService
-          ? _value.placeOfService
-          : placeOfService // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      allowStuBooking: freezed == allowStuBooking
-          ? _value.allowStuBooking
-          : allowStuBooking // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as num?,
     ) as $Val);
   }
 }
@@ -291,27 +203,16 @@ abstract class _$$_ClinicCopyWith<$Res> implements $ClinicCopyWith<$Res> {
       @JsonKey(name: 'STOP_TIME') String? stopTime,
       @JsonKey(name: 'CLINIC_SESSION') String? clinicSession,
       @JsonKey(name: 'LEAD_OPERATOR') dynamic leadOperator,
-      @JsonKey(name: 'SLOT_LENGTH') String? slotLength,
-      @JsonKey(name: 'SLOTS') String? slots,
-      @JsonKey(name: 'SEATS') String? seats,
+      @JsonKey(name: 'SLOT_LENGTH') num? slotLength,
+      @JsonKey(name: 'SLOTS') num? slots,
+      @JsonKey(name: 'SEATS') num? seats,
       @JsonKey(name: 'NOTES') dynamic notes,
       @JsonKey(name: 'STATUS') String? status,
-      @JsonKey(name: 'CAPACITY') String? capacity,
-      @JsonKey(name: 'AVG_CAPACITY') String? avgCapacity,
-      @JsonKey(name: 'ARCHIVE') String? archive,
+      @JsonKey(name: 'CAPACITY') num? capacity,
+      @JsonKey(name: 'AVG_CAPACITY') num? avgCapacity,
       @JsonKey(name: 'SLOT_VIEW') String? slotView,
-      @JsonKey(name: 'APPOINTMENTS') String? appointments,
-      @JsonKey(name: 'USED_SLOTS') String? usedSlots,
-      @JsonKey(name: 'TREATMENT_FORM') String? treatmentForm,
-      @JsonKey(name: 'APPT_TYPE') String? apptType,
-      @JsonKey(name: 'CSSD_ORDERED') String? cssdOrdered,
-      @JsonKey(name: 'REQ_CHAIR_BOOK') int? reqChairBook,
-      @JsonKey(name: 'TX_AREA') dynamic txArea,
-      @JsonKey(name: 'ROT_TYPE') dynamic rotType,
-      @JsonKey(name: 'ACTIVITY_TYPE') dynamic activityType,
-      @JsonKey(name: 'DISCIPLINE_CODE') String? disciplineCode,
-      @JsonKey(name: 'PLACE_OF_SERVICE') dynamic placeOfService,
-      @JsonKey(name: 'ALLOW_STU_BOOKING') String? allowStuBooking});
+      @JsonKey(name: 'APPOINTMENTS') num? appointments,
+      @JsonKey(name: 'USED_SLOTS') num? usedSlots});
 }
 
 /// @nodoc
@@ -330,28 +231,17 @@ class __$$_ClinicCopyWithImpl<$Res>
     Object? startTime = freezed,
     Object? stopTime = freezed,
     Object? clinicSession = freezed,
-    Object? leadOperator = null,
+    Object? leadOperator = freezed,
     Object? slotLength = freezed,
     Object? slots = freezed,
     Object? seats = freezed,
-    Object? notes = null,
+    Object? notes = freezed,
     Object? status = freezed,
     Object? capacity = freezed,
     Object? avgCapacity = freezed,
-    Object? archive = freezed,
     Object? slotView = freezed,
     Object? appointments = freezed,
     Object? usedSlots = freezed,
-    Object? treatmentForm = freezed,
-    Object? apptType = freezed,
-    Object? cssdOrdered = freezed,
-    Object? reqChairBook = freezed,
-    Object? txArea = null,
-    Object? rotType = null,
-    Object? activityType = null,
-    Object? disciplineCode = freezed,
-    Object? placeOfService = null,
-    Object? allowStuBooking = freezed,
   }) {
     return _then(_$_Clinic(
       clinicCode: freezed == clinicCode
@@ -378,23 +268,23 @@ class __$$_ClinicCopyWithImpl<$Res>
           ? _value.clinicSession
           : clinicSession // ignore: cast_nullable_to_non_nullable
               as String?,
-      leadOperator: null == leadOperator
+      leadOperator: freezed == leadOperator
           ? _value.leadOperator
           : leadOperator // ignore: cast_nullable_to_non_nullable
               as dynamic,
       slotLength: freezed == slotLength
           ? _value.slotLength
           : slotLength // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as num?,
       slots: freezed == slots
           ? _value.slots
           : slots // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as num?,
       seats: freezed == seats
           ? _value.seats
           : seats // ignore: cast_nullable_to_non_nullable
-              as String?,
-      notes: null == notes
+              as num?,
+      notes: freezed == notes
           ? _value.notes
           : notes // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -405,15 +295,11 @@ class __$$_ClinicCopyWithImpl<$Res>
       capacity: freezed == capacity
           ? _value.capacity
           : capacity // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as num?,
       avgCapacity: freezed == avgCapacity
           ? _value.avgCapacity
           : avgCapacity // ignore: cast_nullable_to_non_nullable
-              as String?,
-      archive: freezed == archive
-          ? _value.archive
-          : archive // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as num?,
       slotView: freezed == slotView
           ? _value.slotView
           : slotView // ignore: cast_nullable_to_non_nullable
@@ -421,51 +307,11 @@ class __$$_ClinicCopyWithImpl<$Res>
       appointments: freezed == appointments
           ? _value.appointments
           : appointments // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as num?,
       usedSlots: freezed == usedSlots
           ? _value.usedSlots
           : usedSlots // ignore: cast_nullable_to_non_nullable
-              as String?,
-      treatmentForm: freezed == treatmentForm
-          ? _value.treatmentForm
-          : treatmentForm // ignore: cast_nullable_to_non_nullable
-              as String?,
-      apptType: freezed == apptType
-          ? _value.apptType
-          : apptType // ignore: cast_nullable_to_non_nullable
-              as String?,
-      cssdOrdered: freezed == cssdOrdered
-          ? _value.cssdOrdered
-          : cssdOrdered // ignore: cast_nullable_to_non_nullable
-              as String?,
-      reqChairBook: freezed == reqChairBook
-          ? _value.reqChairBook
-          : reqChairBook // ignore: cast_nullable_to_non_nullable
-              as int?,
-      txArea: null == txArea
-          ? _value.txArea
-          : txArea // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      rotType: null == rotType
-          ? _value.rotType
-          : rotType // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      activityType: null == activityType
-          ? _value.activityType
-          : activityType // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      disciplineCode: freezed == disciplineCode
-          ? _value.disciplineCode
-          : disciplineCode // ignore: cast_nullable_to_non_nullable
-              as String?,
-      placeOfService: null == placeOfService
-          ? _value.placeOfService
-          : placeOfService // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      allowStuBooking: freezed == allowStuBooking
-          ? _value.allowStuBooking
-          : allowStuBooking // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as num?,
     ));
   }
 }
@@ -488,20 +334,9 @@ class _$_Clinic implements _Clinic {
       @JsonKey(name: 'STATUS') this.status,
       @JsonKey(name: 'CAPACITY') this.capacity,
       @JsonKey(name: 'AVG_CAPACITY') this.avgCapacity,
-      @JsonKey(name: 'ARCHIVE') this.archive,
       @JsonKey(name: 'SLOT_VIEW') this.slotView,
       @JsonKey(name: 'APPOINTMENTS') this.appointments,
-      @JsonKey(name: 'USED_SLOTS') this.usedSlots,
-      @JsonKey(name: 'TREATMENT_FORM') this.treatmentForm,
-      @JsonKey(name: 'APPT_TYPE') this.apptType,
-      @JsonKey(name: 'CSSD_ORDERED') this.cssdOrdered,
-      @JsonKey(name: 'REQ_CHAIR_BOOK') this.reqChairBook,
-      @JsonKey(name: 'TX_AREA') this.txArea,
-      @JsonKey(name: 'ROT_TYPE') this.rotType,
-      @JsonKey(name: 'ACTIVITY_TYPE') this.activityType,
-      @JsonKey(name: 'DISCIPLINE_CODE') this.disciplineCode,
-      @JsonKey(name: 'PLACE_OF_SERVICE') this.placeOfService,
-      @JsonKey(name: 'ALLOW_STU_BOOKING') this.allowStuBooking});
+      @JsonKey(name: 'USED_SLOTS') this.usedSlots});
 
   factory _$_Clinic.fromJson(Map<String, dynamic> json) =>
       _$$_ClinicFromJson(json);
@@ -529,13 +364,13 @@ class _$_Clinic implements _Clinic {
   final dynamic leadOperator;
   @override
   @JsonKey(name: 'SLOT_LENGTH')
-  final String? slotLength;
+  final num? slotLength;
   @override
   @JsonKey(name: 'SLOTS')
-  final String? slots;
+  final num? slots;
   @override
   @JsonKey(name: 'SEATS')
-  final String? seats;
+  final num? seats;
   @override
   @JsonKey(name: 'NOTES')
   final dynamic notes;
@@ -544,56 +379,23 @@ class _$_Clinic implements _Clinic {
   final String? status;
   @override
   @JsonKey(name: 'CAPACITY')
-  final String? capacity;
+  final num? capacity;
   @override
   @JsonKey(name: 'AVG_CAPACITY')
-  final String? avgCapacity;
-  @override
-  @JsonKey(name: 'ARCHIVE')
-  final String? archive;
+  final num? avgCapacity;
   @override
   @JsonKey(name: 'SLOT_VIEW')
   final String? slotView;
   @override
   @JsonKey(name: 'APPOINTMENTS')
-  final String? appointments;
+  final num? appointments;
   @override
   @JsonKey(name: 'USED_SLOTS')
-  final String? usedSlots;
-  @override
-  @JsonKey(name: 'TREATMENT_FORM')
-  final String? treatmentForm;
-  @override
-  @JsonKey(name: 'APPT_TYPE')
-  final String? apptType;
-  @override
-  @JsonKey(name: 'CSSD_ORDERED')
-  final String? cssdOrdered;
-  @override
-  @JsonKey(name: 'REQ_CHAIR_BOOK')
-  final int? reqChairBook;
-  @override
-  @JsonKey(name: 'TX_AREA')
-  final dynamic txArea;
-  @override
-  @JsonKey(name: 'ROT_TYPE')
-  final dynamic rotType;
-  @override
-  @JsonKey(name: 'ACTIVITY_TYPE')
-  final dynamic activityType;
-  @override
-  @JsonKey(name: 'DISCIPLINE_CODE')
-  final String? disciplineCode;
-  @override
-  @JsonKey(name: 'PLACE_OF_SERVICE')
-  final dynamic placeOfService;
-  @override
-  @JsonKey(name: 'ALLOW_STU_BOOKING')
-  final String? allowStuBooking;
+  final num? usedSlots;
 
   @override
   String toString() {
-    return 'Clinic(clinicCode: $clinicCode, location: $location, clinicDate: $clinicDate, startTime: $startTime, stopTime: $stopTime, clinicSession: $clinicSession, leadOperator: $leadOperator, slotLength: $slotLength, slots: $slots, seats: $seats, notes: $notes, status: $status, capacity: $capacity, avgCapacity: $avgCapacity, archive: $archive, slotView: $slotView, appointments: $appointments, usedSlots: $usedSlots, treatmentForm: $treatmentForm, apptType: $apptType, cssdOrdered: $cssdOrdered, reqChairBook: $reqChairBook, txArea: $txArea, rotType: $rotType, activityType: $activityType, disciplineCode: $disciplineCode, placeOfService: $placeOfService, allowStuBooking: $allowStuBooking)';
+    return 'Clinic(clinicCode: $clinicCode, location: $location, clinicDate: $clinicDate, startTime: $startTime, stopTime: $stopTime, clinicSession: $clinicSession, leadOperator: $leadOperator, slotLength: $slotLength, slots: $slots, seats: $seats, notes: $notes, status: $status, capacity: $capacity, avgCapacity: $avgCapacity, slotView: $slotView, appointments: $appointments, usedSlots: $usedSlots)';
   }
 
   @override
@@ -625,66 +427,35 @@ class _$_Clinic implements _Clinic {
                 other.capacity == capacity) &&
             (identical(other.avgCapacity, avgCapacity) ||
                 other.avgCapacity == avgCapacity) &&
-            (identical(other.archive, archive) || other.archive == archive) &&
             (identical(other.slotView, slotView) ||
                 other.slotView == slotView) &&
             (identical(other.appointments, appointments) ||
                 other.appointments == appointments) &&
             (identical(other.usedSlots, usedSlots) ||
-                other.usedSlots == usedSlots) &&
-            (identical(other.treatmentForm, treatmentForm) ||
-                other.treatmentForm == treatmentForm) &&
-            (identical(other.apptType, apptType) ||
-                other.apptType == apptType) &&
-            (identical(other.cssdOrdered, cssdOrdered) ||
-                other.cssdOrdered == cssdOrdered) &&
-            (identical(other.reqChairBook, reqChairBook) ||
-                other.reqChairBook == reqChairBook) &&
-            const DeepCollectionEquality().equals(other.txArea, txArea) &&
-            const DeepCollectionEquality().equals(other.rotType, rotType) &&
-            const DeepCollectionEquality()
-                .equals(other.activityType, activityType) &&
-            (identical(other.disciplineCode, disciplineCode) ||
-                other.disciplineCode == disciplineCode) &&
-            const DeepCollectionEquality()
-                .equals(other.placeOfService, placeOfService) &&
-            (identical(other.allowStuBooking, allowStuBooking) ||
-                other.allowStuBooking == allowStuBooking));
+                other.usedSlots == usedSlots));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hashAll([
-        runtimeType,
-        clinicCode,
-        location,
-        clinicDate,
-        startTime,
-        stopTime,
-        clinicSession,
-        const DeepCollectionEquality().hash(leadOperator),
-        slotLength,
-        slots,
-        seats,
-        const DeepCollectionEquality().hash(notes),
-        status,
-        capacity,
-        avgCapacity,
-        archive,
-        slotView,
-        appointments,
-        usedSlots,
-        treatmentForm,
-        apptType,
-        cssdOrdered,
-        reqChairBook,
-        const DeepCollectionEquality().hash(txArea),
-        const DeepCollectionEquality().hash(rotType),
-        const DeepCollectionEquality().hash(activityType),
-        disciplineCode,
-        const DeepCollectionEquality().hash(placeOfService),
-        allowStuBooking
-      ]);
+  int get hashCode => Object.hash(
+      runtimeType,
+      clinicCode,
+      location,
+      clinicDate,
+      startTime,
+      stopTime,
+      clinicSession,
+      const DeepCollectionEquality().hash(leadOperator),
+      slotLength,
+      slots,
+      seats,
+      const DeepCollectionEquality().hash(notes),
+      status,
+      capacity,
+      avgCapacity,
+      slotView,
+      appointments,
+      usedSlots);
 
   @JsonKey(ignore: true)
   @override
@@ -702,35 +473,23 @@ class _$_Clinic implements _Clinic {
 
 abstract class _Clinic implements Clinic {
   factory _Clinic(
-          {@JsonKey(name: 'CLINIC_CODE') final String? clinicCode,
-          @JsonKey(name: 'LOCATION') final String? location,
-          @JsonKey(name: 'CLINIC_DATE') final String? clinicDate,
-          @JsonKey(name: 'START_TIME') final String? startTime,
-          @JsonKey(name: 'STOP_TIME') final String? stopTime,
-          @JsonKey(name: 'CLINIC_SESSION') final String? clinicSession,
-          @JsonKey(name: 'LEAD_OPERATOR') final dynamic leadOperator,
-          @JsonKey(name: 'SLOT_LENGTH') final String? slotLength,
-          @JsonKey(name: 'SLOTS') final String? slots,
-          @JsonKey(name: 'SEATS') final String? seats,
-          @JsonKey(name: 'NOTES') final dynamic notes,
-          @JsonKey(name: 'STATUS') final String? status,
-          @JsonKey(name: 'CAPACITY') final String? capacity,
-          @JsonKey(name: 'AVG_CAPACITY') final String? avgCapacity,
-          @JsonKey(name: 'ARCHIVE') final String? archive,
-          @JsonKey(name: 'SLOT_VIEW') final String? slotView,
-          @JsonKey(name: 'APPOINTMENTS') final String? appointments,
-          @JsonKey(name: 'USED_SLOTS') final String? usedSlots,
-          @JsonKey(name: 'TREATMENT_FORM') final String? treatmentForm,
-          @JsonKey(name: 'APPT_TYPE') final String? apptType,
-          @JsonKey(name: 'CSSD_ORDERED') final String? cssdOrdered,
-          @JsonKey(name: 'REQ_CHAIR_BOOK') final int? reqChairBook,
-          @JsonKey(name: 'TX_AREA') final dynamic txArea,
-          @JsonKey(name: 'ROT_TYPE') final dynamic rotType,
-          @JsonKey(name: 'ACTIVITY_TYPE') final dynamic activityType,
-          @JsonKey(name: 'DISCIPLINE_CODE') final String? disciplineCode,
-          @JsonKey(name: 'PLACE_OF_SERVICE') final dynamic placeOfService,
-          @JsonKey(name: 'ALLOW_STU_BOOKING') final String? allowStuBooking}) =
-      _$_Clinic;
+      {@JsonKey(name: 'CLINIC_CODE') final String? clinicCode,
+      @JsonKey(name: 'LOCATION') final String? location,
+      @JsonKey(name: 'CLINIC_DATE') final String? clinicDate,
+      @JsonKey(name: 'START_TIME') final String? startTime,
+      @JsonKey(name: 'STOP_TIME') final String? stopTime,
+      @JsonKey(name: 'CLINIC_SESSION') final String? clinicSession,
+      @JsonKey(name: 'LEAD_OPERATOR') final dynamic leadOperator,
+      @JsonKey(name: 'SLOT_LENGTH') final num? slotLength,
+      @JsonKey(name: 'SLOTS') final num? slots,
+      @JsonKey(name: 'SEATS') final num? seats,
+      @JsonKey(name: 'NOTES') final dynamic notes,
+      @JsonKey(name: 'STATUS') final String? status,
+      @JsonKey(name: 'CAPACITY') final num? capacity,
+      @JsonKey(name: 'AVG_CAPACITY') final num? avgCapacity,
+      @JsonKey(name: 'SLOT_VIEW') final String? slotView,
+      @JsonKey(name: 'APPOINTMENTS') final num? appointments,
+      @JsonKey(name: 'USED_SLOTS') final num? usedSlots}) = _$_Clinic;
 
   factory _Clinic.fromJson(Map<String, dynamic> json) = _$_Clinic.fromJson;
 
@@ -757,13 +516,13 @@ abstract class _Clinic implements Clinic {
   dynamic get leadOperator;
   @override
   @JsonKey(name: 'SLOT_LENGTH')
-  String? get slotLength;
+  num? get slotLength;
   @override
   @JsonKey(name: 'SLOTS')
-  String? get slots;
+  num? get slots;
   @override
   @JsonKey(name: 'SEATS')
-  String? get seats;
+  num? get seats;
   @override
   @JsonKey(name: 'NOTES')
   dynamic get notes;
@@ -772,52 +531,19 @@ abstract class _Clinic implements Clinic {
   String? get status;
   @override
   @JsonKey(name: 'CAPACITY')
-  String? get capacity;
+  num? get capacity;
   @override
   @JsonKey(name: 'AVG_CAPACITY')
-  String? get avgCapacity;
-  @override
-  @JsonKey(name: 'ARCHIVE')
-  String? get archive;
+  num? get avgCapacity;
   @override
   @JsonKey(name: 'SLOT_VIEW')
   String? get slotView;
   @override
   @JsonKey(name: 'APPOINTMENTS')
-  String? get appointments;
+  num? get appointments;
   @override
   @JsonKey(name: 'USED_SLOTS')
-  String? get usedSlots;
-  @override
-  @JsonKey(name: 'TREATMENT_FORM')
-  String? get treatmentForm;
-  @override
-  @JsonKey(name: 'APPT_TYPE')
-  String? get apptType;
-  @override
-  @JsonKey(name: 'CSSD_ORDERED')
-  String? get cssdOrdered;
-  @override
-  @JsonKey(name: 'REQ_CHAIR_BOOK')
-  int? get reqChairBook;
-  @override
-  @JsonKey(name: 'TX_AREA')
-  dynamic get txArea;
-  @override
-  @JsonKey(name: 'ROT_TYPE')
-  dynamic get rotType;
-  @override
-  @JsonKey(name: 'ACTIVITY_TYPE')
-  dynamic get activityType;
-  @override
-  @JsonKey(name: 'DISCIPLINE_CODE')
-  String? get disciplineCode;
-  @override
-  @JsonKey(name: 'PLACE_OF_SERVICE')
-  dynamic get placeOfService;
-  @override
-  @JsonKey(name: 'ALLOW_STU_BOOKING')
-  String? get allowStuBooking;
+  num? get usedSlots;
   @override
   @JsonKey(ignore: true)
   _$$_ClinicCopyWith<_$_Clinic> get copyWith =>

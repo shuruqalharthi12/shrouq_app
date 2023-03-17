@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'profile.dart';
 
@@ -88,9 +88,9 @@ class _$ProfileCopyWithImpl<$Res, $Val extends Profile>
     Object? maidenSurname = freezed,
     Object? surname = freezed,
     Object? birthDate = freezed,
-    Object? ssnType = null,
+    Object? ssnType = freezed,
     Object? ssn = freezed,
-    Object? nationalityId = null,
+    Object? nationalityId = freezed,
     Object? telephone1 = freezed,
     Object? sex = freezed,
     Object? appointment = freezed,
@@ -120,7 +120,7 @@ class _$ProfileCopyWithImpl<$Res, $Val extends Profile>
           ? _value.birthDate
           : birthDate // ignore: cast_nullable_to_non_nullable
               as String?,
-      ssnType: null == ssnType
+      ssnType: freezed == ssnType
           ? _value.ssnType
           : ssnType // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -128,7 +128,7 @@ class _$ProfileCopyWithImpl<$Res, $Val extends Profile>
           ? _value.ssn
           : ssn // ignore: cast_nullable_to_non_nullable
               as String?,
-      nationalityId: null == nationalityId
+      nationalityId: freezed == nationalityId
           ? _value.nationalityId
           : nationalityId // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -186,9 +186,9 @@ class __$$_ProfileCopyWithImpl<$Res>
     Object? maidenSurname = freezed,
     Object? surname = freezed,
     Object? birthDate = freezed,
-    Object? ssnType = null,
+    Object? ssnType = freezed,
     Object? ssn = freezed,
-    Object? nationalityId = null,
+    Object? nationalityId = freezed,
     Object? telephone1 = freezed,
     Object? sex = freezed,
     Object? appointment = freezed,
@@ -218,7 +218,7 @@ class __$$_ProfileCopyWithImpl<$Res>
           ? _value.birthDate
           : birthDate // ignore: cast_nullable_to_non_nullable
               as String?,
-      ssnType: null == ssnType
+      ssnType: freezed == ssnType
           ? _value.ssnType
           : ssnType // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -226,7 +226,7 @@ class __$$_ProfileCopyWithImpl<$Res>
           ? _value.ssn
           : ssn // ignore: cast_nullable_to_non_nullable
               as String?,
-      nationalityId: null == nationalityId
+      nationalityId: freezed == nationalityId
           ? _value.nationalityId
           : nationalityId // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -305,6 +305,7 @@ class _$_Profile implements _Profile {
   List<Appointment>? get appointment {
     final value = _appointment;
     if (value == null) return null;
+    if (_appointment is EqualUnmodifiableListView) return _appointment;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }

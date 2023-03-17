@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'user_notifications.dart';
 
@@ -21,7 +21,7 @@ UserNotifications _$UserNotificationsFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$UserNotifications {
   @JsonKey(name: 'HOSPITAL_NO')
-  int? get hospitalNo => throw _privateConstructorUsedError;
+  String? get hospitalNo => throw _privateConstructorUsedError;
   @JsonKey(name: 'MESSAGE_TITLE')
   String? get messageTitle => throw _privateConstructorUsedError;
   @JsonKey(name: 'MESSAGE_BODY')
@@ -42,7 +42,7 @@ abstract class $UserNotificationsCopyWith<$Res> {
       _$UserNotificationsCopyWithImpl<$Res, UserNotifications>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'HOSPITAL_NO') int? hospitalNo,
+      {@JsonKey(name: 'HOSPITAL_NO') String? hospitalNo,
       @JsonKey(name: 'MESSAGE_TITLE') String? messageTitle,
       @JsonKey(name: 'MESSAGE_BODY') String? messageBody,
       @JsonKey(name: 'DATE_CREATED') String? dateCreated});
@@ -70,7 +70,7 @@ class _$UserNotificationsCopyWithImpl<$Res, $Val extends UserNotifications>
       hospitalNo: freezed == hospitalNo
           ? _value.hospitalNo
           : hospitalNo // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       messageTitle: freezed == messageTitle
           ? _value.messageTitle
           : messageTitle // ignore: cast_nullable_to_non_nullable
@@ -96,7 +96,7 @@ abstract class _$$_UserNotificationsCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'HOSPITAL_NO') int? hospitalNo,
+      {@JsonKey(name: 'HOSPITAL_NO') String? hospitalNo,
       @JsonKey(name: 'MESSAGE_TITLE') String? messageTitle,
       @JsonKey(name: 'MESSAGE_BODY') String? messageBody,
       @JsonKey(name: 'DATE_CREATED') String? dateCreated});
@@ -122,7 +122,7 @@ class __$$_UserNotificationsCopyWithImpl<$Res>
       hospitalNo: freezed == hospitalNo
           ? _value.hospitalNo
           : hospitalNo // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       messageTitle: freezed == messageTitle
           ? _value.messageTitle
           : messageTitle // ignore: cast_nullable_to_non_nullable
@@ -153,7 +153,7 @@ class _$_UserNotifications implements _UserNotifications {
 
   @override
   @JsonKey(name: 'HOSPITAL_NO')
-  final int? hospitalNo;
+  final String? hospitalNo;
   @override
   @JsonKey(name: 'MESSAGE_TITLE')
   final String? messageTitle;
@@ -206,7 +206,7 @@ class _$_UserNotifications implements _UserNotifications {
 
 abstract class _UserNotifications implements UserNotifications {
   factory _UserNotifications(
-          {@JsonKey(name: 'HOSPITAL_NO') final int? hospitalNo,
+          {@JsonKey(name: 'HOSPITAL_NO') final String? hospitalNo,
           @JsonKey(name: 'MESSAGE_TITLE') final String? messageTitle,
           @JsonKey(name: 'MESSAGE_BODY') final String? messageBody,
           @JsonKey(name: 'DATE_CREATED') final String? dateCreated}) =
@@ -217,7 +217,7 @@ abstract class _UserNotifications implements UserNotifications {
 
   @override
   @JsonKey(name: 'HOSPITAL_NO')
-  int? get hospitalNo;
+  String? get hospitalNo;
   @override
   @JsonKey(name: 'MESSAGE_TITLE')
   String? get messageTitle;
