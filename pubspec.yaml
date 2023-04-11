@@ -106,7 +106,7 @@ flutter:
   assets:
     - assets/image/
     - assets/translations/
-    -
+    - assets/ca/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

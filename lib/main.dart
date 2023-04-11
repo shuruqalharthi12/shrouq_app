@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -11,7 +13,7 @@ import 'login/view/login_page.dart';
 import 'repository/auth_repository.dart';
 import 'repository/token_repository.dart';
 import 'splash/splash_page.dart';
-
+import 'package:flutter/services.dart';
 import 'auth/bloc/bloc/authentication_bloc.dart';
 import 'core/di.dart';
 import 'firebase_options.dart';
@@ -19,6 +21,9 @@ import 'navigation/navigation_bar_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  ByteData data = await PlatformAssetBundle().load('assets/ca/lets-encrypt-r3.pem');
+  SecurityContext.defaultContext.setTrustedCertificatesBytes(data.buffer.asUint8List());
+
   await EasyLocalization.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,

@@ -1,5 +1,6 @@
 import 'dart:async';
-import 'dart:io' show Platform;
+import 'dart:io' show HttpClient, Platform, X509Certificate;
+import 'package:dio/adapter.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
@@ -19,6 +20,12 @@ class DioClient {
       sendTimeout: 10000,
     );
     _dio.interceptors.add(_interceptor());
+    (dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate =
+        (HttpClient client) {
+      client.badCertificateCallback =
+          (X509Certificate cert, String host, int port) => true;
+      return client;
+    };
   }
   Interceptor _interceptor() {
     return InterceptorsWrapper(

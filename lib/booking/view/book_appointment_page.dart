@@ -106,7 +106,7 @@ class _BookAppointmentViewState extends State<BookAppointmentView> {
                                     child: ElevatedButton(
                                         onPressed: () {
                                           ScaffoldMessenger.of(context).showSnackBar(
-                                            SnackBar(content: Text("your appointment is booked").tr())
+                                            SnackBar(content: Text("Appointment booked").tr())
                                           );
                                         },
                                         child: Text(

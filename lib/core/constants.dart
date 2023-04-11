@@ -2,10 +2,10 @@ import 'dart:io' show Platform;
 
 const String kAppTitle = 'SHROUQ';
 
-const String kBasedUrl = 'http://10.69.111.220/api/';
+const String kBasedUrl = 'https://api1-cod.ksau-hs.edu.sa/api/';
 
 // ios emulator
-const String ioskBasedUrl = 'http://10.69.111.220/api/';
+const String ioskBasedUrl = 'https://api1-cod.ksau-hs.edu.sa/api/';
 
 const String kLoginUrl = 'patients/login';
 const String kPatiend2tRegisterUrl = 'patients/register';
