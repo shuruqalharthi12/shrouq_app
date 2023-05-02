@@ -20,10 +20,9 @@
 - [X] Home page
 - [X] QR code Generator
 - [X] Notifications
-- [ ] OTP verification
+- [X] OTP verification
 - [ ] Profile
 - [ ] Reset password
-- [ ] Edit basic info
 - [ ]  ...
 
 ##### Phase 2
