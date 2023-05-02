@@ -31,21 +31,6 @@
 
 
 
-#### Screenshots
-
-
-
-| Login | Register | Home |
-| :---: | :---: | :---: |
-| ![Login](https://i.imgur.com/0Z0Z0ZM.png) | ![Register](https://i.imgur.com/0Z0Z0ZM.png) | ![Home](https://i.imgur.com/0Z0Z0ZM.png) |
-
-| QR code Generator | Notifications | OTP verification |
-| :---: | :---: | :---: |
-| ![QR code Generator](https://i.imgur.com/0Z0Z0ZM.png) | ![Notifications](https://i.imgur.com/0Z0Z0ZM.png) | ![OTP verification](https://i.imgur.com/0Z0Z0ZM.png) |
-
-| Profile | Reset password | Edit basic info |
-| :---: | :---: | :---: |
-| ![Profile](https://i.imgur.com/0Z0Z0ZM.png) | ![Reset password](https://i.imgur.com/0Z0Z0ZM.png) | ![Edit basic info](https://i.imgur.com/0Z0Z0ZM.png) |
 
 
 ##### Progrees bar
